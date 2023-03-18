@@ -1,22 +1,59 @@
 :root {
-    --blanco: #ffffff;
+    --blanco: #FFFFFF;
     --oscuro: #212121;
-    --primario: #ffc107;
-    --secundario: #0097a7;
+    --primario: #FFC107;
+    --secundario: #0097A7;
     --gris: #757575;
+    --grisClaro: #DFE9F3;
     }
-
+/*GLobales*/
 html {
     font-size: 62.5%;
-    box-sizing: border-box;
+    box-sizing: border-box;  /*HACK PARA BOX MODEL */
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
-    
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.47);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.47);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.47);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+/*TIPOGRAFIAS*/
+   
 body { 
     font-size: 16px; /* 1 rem = 10px */
     font-family: 'krub', Verdana, Geneva, Tahoma, sans-serif;
+   /* DEGRADADO FONDO */
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% ); 
 }
 
 h1{
@@ -34,28 +71,11 @@ h3{
 h1,h2,h3 {
     text-align: center;
 }
-
+/* TITULOS */
 .titulo span {
     font-size: 2rem;
 }
-
-.contenedor {
-    max-width: 120rem;
-    margin: 0 auto;
-}
-
-.boton{
-    background-color: var(--secundario);
-    color: var(--blanco);
-    padding: 1rem 3rem;
-    margin-top: 1rem;
-    font-size: 2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: .5rem;
-    
-}
+/* NAVEGACION PRINCIPAL */
 .nav-bg{
     background-color: var(--secundario);
 }
@@ -85,13 +105,14 @@ h1,h2,h3 {
     background-color: var(--primario);
     color: var(--oscuro);
 }
-
+/* HERO */
 .hero{
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .contenido-hero {
@@ -112,7 +133,7 @@ h1,h2,h3 {
 .contenido-hero p {
 color: var(--blanco);
 }
-.ubicacion{
+.contenido-hero .ubicacion{
     display: flex;
     align-items: baseline;
 
