@@ -40,8 +40,6 @@ html {
 }
 
 .sombra {
-    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.47);
-    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.47);
     box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.47);
     background-color: var(--blanco);
     padding: 2rem;
@@ -136,5 +134,25 @@ color: var(--blanco);
 .contenido-hero .ubicacion{
     display: flex;
     align-items: baseline;
-
 } 
+
+/* servicios */
+@media (min-width: 768px) {  /*sirve para que en pantallas pequeñas se alineen hacia abajo*/
+.servicios {
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*aqui multiplica 3 x 1 fraccion*/
+    column-gap: 1rem; /*separacion entre columnas */
+}
+}
+    /*  Estas son la formas de decir cuantas columnas queremos y repartir el espacio
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 1fr 1fr 1fr;
+    */
+.servicio {
+
+}
+
+.servicio h3 {
+
+}
